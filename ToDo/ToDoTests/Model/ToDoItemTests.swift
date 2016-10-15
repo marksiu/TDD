@@ -1,5 +1,5 @@
 //
-//  ToDoItemTest.swift
+//  ToDoItemTests.swift
 //  ToDo
 //
 //  Created by Mark Siu on 15/10/2016.
@@ -11,7 +11,7 @@ import XCTest
 // add this line to make sure the text class can access to project
 @testable import ToDo
 
-class ToDoItemTest: XCTestCase {
+class ToDoItemTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -39,5 +39,12 @@ class ToDoItemTest: XCTestCase {
         let item = ToDoItem(title: "Test title", itemDescription: "Test description", timestamp: 0.0)
         
         XCTAssertEqual(0.0, item.timestamp, "Initializer should set the item timestamp")
+    }
+    
+    func testInit_ShouldSetTitleAndDescriptionAndTimestampAndLocation() {
+        let location = Location(name: "Test name")
+        let item = ToDoItem(title: "Test title", itemDescription: "Test description", timestamp: 0.0, location: location)
+        
+        XCTAssertEqual(location.name, item.location?.name, "Initializer should set the location")
     }
 }
