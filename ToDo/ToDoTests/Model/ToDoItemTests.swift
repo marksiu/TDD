@@ -47,4 +47,48 @@ class ToDoItemTests: XCTestCase {
         
         XCTAssertEqual(location.name, item.location?.name, "Initializer should set the location")
     }
+    
+    // The test is nolonger valid due to the requirement updated
+    // check func testWhenTitleDifferes_ShouldBeNotEqual() {}
+//    func testEqualItems_ShouldBeEqual() {
+//        let firstItem = ToDoItem(title: "First")
+//        let secondItem = ToDoItem(title: "Second")
+//        
+//        XCTAssertEqual(firstItem, secondItem)
+//    }
+    
+    func testWhenLocationDifferes_ShouldBeNotEqual() {
+        let firstItem = ToDoItem(title: "First title", itemDescription: "First description", timestamp: 0.0, location: Location(name: "Home"))
+        let secondItem = ToDoItem(title: "Second title", itemDescription: "Second description", timestamp: 0.0, location: Location(name: "Office"))
+        
+        XCTAssertNotEqual(firstItem, secondItem)
+    }
+    
+    func testWhenOneLocationIsNilAndTheOtherIsnt_ShouldBeNotEqual() {
+        let firstItem = ToDoItem(title: "First title", itemDescription: "First description", timestamp: 0.0, location: nil)
+        let secondItem = ToDoItem(title: "First title", itemDescription: "First description", timestamp: 0.0, location: Location(name: "Office"))
+        
+        XCTAssertNotEqual(firstItem, secondItem)
+    }
+    
+    func testWhenTimestampDifferes_ShouldBeNotEqual() {
+        let firstItem = ToDoItem(title: "First title", itemDescription: "First description", timestamp: 1.0)
+        let secondItem = ToDoItem(title: "First title", itemDescription: "First description", timestamp: 0.0)
+        
+        XCTAssertNotEqual(firstItem, secondItem)
+    }
+    
+    func testWhenDescriptionDifferes_ShouldBeNotEqual() {
+        let firstItem = ToDoItem(title: "First title", itemDescription: "First description")
+        let secondItem = ToDoItem(title: "First title", itemDescription: "Second description")
+        
+        XCTAssertNotEqual(firstItem, secondItem)
+    }
+    
+    func testWhenTitleDifferes_ShouldBeNotEqual() {
+        let firstItem = ToDoItem(title: "First title")
+        let secondItem = ToDoItem(title: "Second title")
+        
+        XCTAssertNotEqual(firstItem, secondItem)
+    }
 }
