@@ -16,6 +16,8 @@
 		3AEF20C61DB1F0EA009CDEE9 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF20C51DB1F0EA009CDEE9 /* ToDoItem.swift */; };
 		3AEF20CA1DB23234009CDEE9 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF20C91DB23234009CDEE9 /* LocationTests.swift */; };
 		3AEF20CC1DB2323B009CDEE9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF20CB1DB2323B009CDEE9 /* Location.swift */; };
+		3AEF20CE1DB23B5B009CDEE9 /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF20CD1DB23B5B009CDEE9 /* ItemManagerTests.swift */; };
+		3AEF20D01DB23BE4009CDEE9 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF20CF1DB23BE4009CDEE9 /* ItemManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		3AEF20C51DB1F0EA009CDEE9 /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		3AEF20C91DB23234009CDEE9 /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		3AEF20CB1DB2323B009CDEE9 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3AEF20CD1DB23B5B009CDEE9 /* ItemManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
+		3AEF20CF1DB23BE4009CDEE9 /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 			children = (
 				3AEF20C21DB1F060009CDEE9 /* ToDoItemTests.swift */,
 				3AEF20C91DB23234009CDEE9 /* LocationTests.swift */,
+				3AEF20CD1DB23B5B009CDEE9 /* ItemManagerTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			children = (
 				3AEF20C51DB1F0EA009CDEE9 /* ToDoItem.swift */,
 				3AEF20CB1DB2323B009CDEE9 /* Location.swift */,
+				3AEF20CF1DB23BE4009CDEE9 /* ItemManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEF20A11DB1EE47009CDEE9 /* ViewController.swift in Sources */,
+				3AEF20D01DB23BE4009CDEE9 /* ItemManager.swift in Sources */,
 				3AEF209F1DB1EE47009CDEE9 /* AppDelegate.swift in Sources */,
 				3AEF20CC1DB2323B009CDEE9 /* Location.swift in Sources */,
 				3AEF20C61DB1F0EA009CDEE9 /* ToDoItem.swift in Sources */,
@@ -236,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AEF20CE1DB23B5B009CDEE9 /* ItemManagerTests.swift in Sources */,
 				3AEF20CA1DB23234009CDEE9 /* LocationTests.swift in Sources */,
 				3AEF20C31DB1F060009CDEE9 /* ToDoItemTests.swift in Sources */,
 			);
