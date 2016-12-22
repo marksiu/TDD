@@ -10,12 +10,14 @@ import UIKit
 
 class ItemListViewController: UIViewController {
 
-    @IBOutlet var tableView: UITableView?
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var dataProvider: (UITableViewDataSource & UITableViewDelegate)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        tableView = UITableView()
+        tableView.dataSource = dataProvider
+        tableView.delegate = dataProvider
     }
     
     
