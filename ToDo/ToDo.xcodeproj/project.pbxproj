@@ -10,6 +10,9 @@
 		3A74C1861E3B89CA00221CF8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1851E3B89CA00221CF8 /* Location.swift */; };
 		3A74C1871E3B8A6300221CF8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1851E3B89CA00221CF8 /* Location.swift */; };
 		3A74C1891E3B8AA300221CF8 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1881E3B8AA300221CF8 /* LocationTests.swift */; };
+		3A74C18B1E3B8DE800221CF8 /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C18A1E3B8DE800221CF8 /* ItemManagerTests.swift */; };
+		3A74C18E1E3CCC9400221CF8 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C18C1E3B8E3D00221CF8 /* ItemManager.swift */; };
+		3A74C18F1E3CCCA200221CF8 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C18C1E3B8E3D00221CF8 /* ItemManager.swift */; };
 		3AEF209F1DB1EE47009CDEE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF209E1DB1EE47009CDEE9 /* AppDelegate.swift */; };
 		3AEF20A11DB1EE47009CDEE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF20A01DB1EE47009CDEE9 /* ViewController.swift */; };
 		3AEF20A41DB1EE47009CDEE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF20A21DB1EE47009CDEE9 /* Main.storyboard */; };
@@ -33,6 +36,8 @@
 /* Begin PBXFileReference section */
 		3A74C1851E3B89CA00221CF8 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3A74C1881E3B8AA300221CF8 /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		3A74C18A1E3B8DE800221CF8 /* ItemManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
+		3A74C18C1E3B8E3D00221CF8 /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		3AEF209B1DB1EE47009CDEE9 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEF209E1DB1EE47009CDEE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEF20A01DB1EE47009CDEE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 				3AEF20A51DB1EE47009CDEE9 /* Assets.xcassets */,
 				3AEF20A71DB1EE47009CDEE9 /* LaunchScreen.storyboard */,
 				3AEF20AA1DB1EE47009CDEE9 /* Info.plist */,
+				3A74C18C1E3B8E3D00221CF8 /* ItemManager.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -101,6 +107,7 @@
 			children = (
 				3AFDA0291E3B624A00D062D4 /* Model */,
 				3AEF20B51DB1EE47009CDEE9 /* Info.plist */,
+				3A74C18A1E3B8DE800221CF8 /* ItemManagerTests.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -228,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEF20A11DB1EE47009CDEE9 /* ViewController.swift in Sources */,
+				3A74C18F1E3CCCA200221CF8 /* ItemManager.swift in Sources */,
 				3AEF209F1DB1EE47009CDEE9 /* AppDelegate.swift in Sources */,
 				3A74C1861E3B89CA00221CF8 /* Location.swift in Sources */,
 				3AFDA02E1E3B63FE00D062D4 /* ToDoItem.swift in Sources */,
@@ -240,7 +248,9 @@
 			files = (
 				3AFDA02F1E3B63FE00D062D4 /* ToDoItem.swift in Sources */,
 				3A74C1871E3B8A6300221CF8 /* Location.swift in Sources */,
+				3A74C18B1E3B8DE800221CF8 /* ItemManagerTests.swift in Sources */,
 				3A74C1891E3B8AA300221CF8 /* LocationTests.swift in Sources */,
+				3A74C18E1E3CCC9400221CF8 /* ItemManager.swift in Sources */,
 				3AFDA02C1E3B629C00D062D4 /* ToDoItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
