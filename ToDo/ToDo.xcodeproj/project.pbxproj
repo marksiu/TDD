@@ -8,22 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		3A2F74931E3DF37100A2633E /* ItemListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F74921E3DF37100A2633E /* ItemListDataProvider.swift */; };
+		3A2F74951E3DF78D00A2633E /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F74941E3DF78D00A2633E /* ItemListDataProviderTests.swift */; };
+		3A2F749A1E3DFDBE00A2633E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF20A21DB1EE47009CDEE9 /* Main.storyboard */; };
+		3A2F749C1E3E231100A2633E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F749B1E3E231100A2633E /* ItemCell.swift */; };
 		3A74C1861E3B89CA00221CF8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1851E3B89CA00221CF8 /* Location.swift */; };
-		3A74C1871E3B8A6300221CF8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1851E3B89CA00221CF8 /* Location.swift */; };
 		3A74C1891E3B8AA300221CF8 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1881E3B8AA300221CF8 /* LocationTests.swift */; };
 		3A74C1A71E3DED2000221CF8 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1A61E3DED2000221CF8 /* ItemManager.swift */; };
 		3A74C1A91E3DED2500221CF8 /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1A81E3DED2500221CF8 /* ItemManagerTests.swift */; };
-		3A74C1AA1E3DED9200221CF8 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1A61E3DED2000221CF8 /* ItemManager.swift */; };
 		3A74C1AC1E3DEDEB00221CF8 /* ItemListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1AB1E3DEDEB00221CF8 /* ItemListViewControllerTest.swift */; };
 		3A74C1AE1E3DEE7F00221CF8 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1AD1E3DEE7F00221CF8 /* ItemListViewController.swift */; };
-		3A74C1B01E3DEFAC00221CF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF20A21DB1EE47009CDEE9 /* Main.storyboard */; };
 		3AEF209F1DB1EE47009CDEE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF209E1DB1EE47009CDEE9 /* AppDelegate.swift */; };
 		3AEF20A41DB1EE47009CDEE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF20A21DB1EE47009CDEE9 /* Main.storyboard */; };
 		3AEF20A61DB1EE47009CDEE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF20A51DB1EE47009CDEE9 /* Assets.xcassets */; };
 		3AEF20A91DB1EE47009CDEE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF20A71DB1EE47009CDEE9 /* LaunchScreen.storyboard */; };
 		3AFDA02C1E3B629C00D062D4 /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA02A1E3B629C00D062D4 /* ToDoItemTests.swift */; };
 		3AFDA02E1E3B63FE00D062D4 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA02D1E3B63FE00D062D4 /* ToDoItem.swift */; };
-		3AFDA02F1E3B63FE00D062D4 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFDA02D1E3B63FE00D062D4 /* ToDoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		3A2F74921E3DF37100A2633E /* ItemListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListDataProvider.swift; sourceTree = "<group>"; };
+		3A2F74941E3DF78D00A2633E /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
+		3A2F749B1E3E231100A2633E /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		3A74C1851E3B89CA00221CF8 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3A74C1881E3B8AA300221CF8 /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		3A74C1A61E3DED2000221CF8 /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 			children = (
 				3A74C1AD1E3DEE7F00221CF8 /* ItemListViewController.swift */,
 				3A2F74921E3DF37100A2633E /* ItemListDataProvider.swift */,
+				3A2F749B1E3E231100A2633E /* ItemCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				3A74C1AB1E3DEDEB00221CF8 /* ItemListViewControllerTest.swift */,
+				3A2F74941E3DF78D00A2633E /* ItemListDataProviderTests.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -263,7 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A74C1B01E3DEFAC00221CF8 /* Main.storyboard in Resources */,
+				3A2F749A1E3DFDBE00A2633E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +281,7 @@
 				3A2F74931E3DF37100A2633E /* ItemListDataProvider.swift in Sources */,
 				3AEF209F1DB1EE47009CDEE9 /* AppDelegate.swift in Sources */,
 				3A74C1861E3B89CA00221CF8 /* Location.swift in Sources */,
+				3A2F749C1E3E231100A2633E /* ItemCell.swift in Sources */,
 				3AFDA02E1E3B63FE00D062D4 /* ToDoItem.swift in Sources */,
 				3A74C1AE1E3DEE7F00221CF8 /* ItemListViewController.swift in Sources */,
 			);
@@ -287,12 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AFDA02F1E3B63FE00D062D4 /* ToDoItem.swift in Sources */,
-				3A74C1871E3B8A6300221CF8 /* Location.swift in Sources */,
 				3A74C1A91E3DED2500221CF8 /* ItemManagerTests.swift in Sources */,
 				3A74C1891E3B8AA300221CF8 /* LocationTests.swift in Sources */,
 				3A74C1AC1E3DEDEB00221CF8 /* ItemListViewControllerTest.swift in Sources */,
-				3A74C1AA1E3DED9200221CF8 /* ItemManager.swift in Sources */,
+				3A2F74951E3DF78D00A2633E /* ItemListDataProviderTests.swift in Sources */,
 				3AFDA02C1E3B629C00D062D4 /* ToDoItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

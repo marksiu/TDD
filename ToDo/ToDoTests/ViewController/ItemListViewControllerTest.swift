@@ -19,8 +19,7 @@ class ItemListViewControllerTest: XCTestCase {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ItemListViewController")
-        sut = viewController as! ToDo.ItemListViewController
-        
+        sut = viewController as! ItemListViewController
         _ = sut.view // tigger viewDidLoad()
     }
     
