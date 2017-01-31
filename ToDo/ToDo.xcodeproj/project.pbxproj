@@ -18,6 +18,8 @@
 		3A74C1A91E3DED2500221CF8 /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1A81E3DED2500221CF8 /* ItemManagerTests.swift */; };
 		3A74C1AC1E3DEDEB00221CF8 /* ItemListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1AB1E3DEDEB00221CF8 /* ItemListViewControllerTest.swift */; };
 		3A74C1AE1E3DEE7F00221CF8 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74C1AD1E3DEE7F00221CF8 /* ItemListViewController.swift */; };
+		3AE9444A1E407DF400E851AB /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE944491E407DF400E851AB /* DetailViewControllerTests.swift */; };
+		3AE9444C1E407EA100E851AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9444B1E407EA100E851AB /* DetailViewController.swift */; };
 		3AEF209F1DB1EE47009CDEE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF209E1DB1EE47009CDEE9 /* AppDelegate.swift */; };
 		3AEF20A41DB1EE47009CDEE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF20A21DB1EE47009CDEE9 /* Main.storyboard */; };
 		3AEF20A61DB1EE47009CDEE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF20A51DB1EE47009CDEE9 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		3A74C1A81E3DED2500221CF8 /* ItemManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
 		3A74C1AB1E3DEDEB00221CF8 /* ItemListViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewControllerTest.swift; sourceTree = "<group>"; };
 		3A74C1AD1E3DEE7F00221CF8 /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		3AE944491E407DF400E851AB /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
+		3AE9444B1E407EA100E851AB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3AEF209B1DB1EE47009CDEE9 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEF209E1DB1EE47009CDEE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEF20A31DB1EE47009CDEE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				3A74C1AD1E3DEE7F00221CF8 /* ItemListViewController.swift */,
 				3A2F74921E3DF37100A2633E /* ItemListDataProvider.swift */,
 				3A2F749B1E3E231100A2633E /* ItemCell.swift */,
+				3AE9444B1E407EA100E851AB /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 				3A74C1AB1E3DEDEB00221CF8 /* ItemListViewControllerTest.swift */,
 				3A2F74941E3DF78D00A2633E /* ItemListDataProviderTests.swift */,
 				3A5CB0C01E405E7A00DE416E /* ItemCellTests.swift */,
+				3AE944491E407DF400E851AB /* DetailViewControllerTests.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 				3A2F749C1E3E231100A2633E /* ItemCell.swift in Sources */,
 				3AFDA02E1E3B63FE00D062D4 /* ToDoItem.swift in Sources */,
 				3A74C1AE1E3DEE7F00221CF8 /* ItemListViewController.swift in Sources */,
+				3AE9444C1E407EA100E851AB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +305,7 @@
 				3A74C1A91E3DED2500221CF8 /* ItemManagerTests.swift in Sources */,
 				3A74C1891E3B8AA300221CF8 /* LocationTests.swift in Sources */,
 				3A74C1AC1E3DEDEB00221CF8 /* ItemListViewControllerTest.swift in Sources */,
+				3AE9444A1E407DF400E851AB /* DetailViewControllerTests.swift in Sources */,
 				3A2F74951E3DF78D00A2633E /* ItemListDataProviderTests.swift in Sources */,
 				3AFDA02C1E3B629C00D062D4 /* ToDoItemTests.swift in Sources */,
 			);
