@@ -13,6 +13,8 @@ import XCTest
 class ItemListViewControllerTest: XCTestCase {
     
     var sut: ItemListViewController!
+    var addButton: UIBarButtonItem!
+    var addAction: Selector!
     
     override func setUp() {
         super.setUp()
@@ -21,6 +23,11 @@ class ItemListViewControllerTest: XCTestCase {
         let viewController = storyboard.instantiateViewController(withIdentifier: "ItemListViewController")
         sut = viewController as! ItemListViewController
         _ = sut.view // tigger viewDidLoad()
+        
+        addButton = sut.navigationItem.rightBarButtonItem
+        addAction = addButton.action
+        
+        UIApplication.shared.keyWindow?.rootViewController = sut
     }
     
     override func tearDown() {
@@ -43,5 +50,39 @@ class ItemListViewControllerTest: XCTestCase {
     func test_LoadingView_SetsDataSourceAndDelegateToSameObject() {
         XCTAssertEqual(sut.tableView.dataSource as? ItemListDataProvider
             , sut.tableView.delegate as? ItemListDataProvider)
+    }
+    
+    func test_ItemListViewController_HasAddBarButtonWithSelfAsTarget() {
+        let target = sut.navigationItem.rightBarButtonItem?.target
+        XCTAssertEqual(target as? UIViewController, sut)
+    }
+    
+    func test_AddItem_PresentsAddItemViewController() {
+        XCTAssertNil(sut.presentedViewController)
+        sut.performSelector(onMainThread: addAction,
+                            with: addButton,
+                            waitUntilDone: true)
+        XCTAssertNotNil(sut.presentedViewController)
+        XCTAssertTrue(sut.presentedViewController is InputViewController)
+        
+        let inputViewController =
+            sut.presentedViewController as! InputViewController
+        XCTAssertNotNil(inputViewController.titleTextField)
+    }
+    
+    func testItemListVC_SharesItemManagerWithInputVC() {
+        sut.performSelector(onMainThread: addAction,
+                            with: addButton,
+                            waitUntilDone: true)
+        guard let inputViewController =
+            sut.presentedViewController as? InputViewController else
+        { XCTFail(); return }
+        guard let inputItemManager = inputViewController.itemManager else
+        { XCTFail(); return }
+        XCTAssertTrue(sut.itemManager === inputItemManager)
+    }
+    
+    func test_ViewDidLoad_SetsItemManagerToDataProvider() {
+        XCTAssertTrue(sut.itemManager === sut.dataProvider.itemManager)
     }
 }
