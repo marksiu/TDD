@@ -61,38 +61,57 @@ class InputViewControllerTests: XCTestCase {
     }
     
     func test_Save_UsesGeocoderToGetCoordinateFromAddress() {
+        let mockSut = MockInputViewController()
+        
+        mockSut.titleTextField = UITextField()
+        mockSut.dateTextField = UITextField()
+        mockSut.locationTextField = UITextField()
+        mockSut.addressTextField = UITextField()
+        mockSut.descriptionTextField = UITextField()
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         
-        // FIX: the below timestamp will occur test case fail
 //        let timestamp = 1456095600.0
         let timestamp = 1456070400.0
         let date = Date(timeIntervalSince1970: timestamp)
-        sut.titleTextField.text = "Foo"
-        sut.dateTextField.text = dateFormatter.string(from: date)
-        sut.locationTextField.text = "Bar"
-        sut.addressTextField.text = "InfiniteLoop 1, Cupertino"
-        sut.descriptionTextField.text = "Baz"
         
-        let mockGeocoder = MockGeocoder()  // dependency injection
-        sut.geocoder = mockGeocoder
+        mockSut.titleTextField.text = "Foo"
+        mockSut.dateTextField.text = dateFormatter.string(from: date)
+        mockSut.locationTextField.text = "Bar"
+        mockSut.addressTextField.text = "Infinite Loop 1, Cupertino"
+        mockSut.descriptionTextField.text = "Baz"
+        let mockGeocoder = MockGeocoder()
+        mockSut.geocoder = mockGeocoder
         
-        sut.itemManager = ItemManager()
+        mockSut.itemManager = ItemManager()
         
-        sut.save()
+        let dismissExpectation = expectation(description: "Dismiss")
+        
+        mockSut.completionHandler = {
+            dismissExpectation.fulfill()
+        }
+        
+        mockSut.save()
         
         placemark = MockPlacemark()
         let coordinate = CLLocationCoordinate2DMake(37.3316851,
                                                     -122.0300674)
         placemark.mockCoordinate = coordinate
         mockGeocoder.completionHandler?([placemark], nil)
-        let item = sut.itemManager?.item(at: 0)
+        
+        waitForExpectations(timeout: 1, handler: nil)
+        
+        let item = mockSut.itemManager?.item(at: 0)
+        
         let testItem = ToDoItem(title: "Foo",
                                 itemDescription: "Baz",
                                 timestamp: timestamp,
                                 location: Location(name: "Bar",
                                                    coordinate: coordinate))
+        
         XCTAssertEqual(item, testItem)
+        mockSut.itemManager?.removeAll()
     }
     
     func test_SaveButtonHasSaveButton() {
@@ -170,9 +189,12 @@ extension InputViewControllerTests {
 extension InputViewControllerTests {
     class MockInputViewController : InputViewController {
         var dismissGotCalled = false
+        var completionHandler: (() -> Void)?
+        
         override func dismiss(animated flag: Bool,
                               completion: (() -> Void)? = nil) {
             dismissGotCalled = true
+            completionHandler?()
         }
     }
 }

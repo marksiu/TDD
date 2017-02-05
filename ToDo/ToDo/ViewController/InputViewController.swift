@@ -44,11 +44,12 @@ class InputViewController: UIViewController {
         
         let descriptionString = descriptionTextField.text
         
-        if let locationName = locationTextField.text, locationName.characters.count > 0 {
-            if let address = addressTextField.text, address.characters.count > 0 {
+        if let locationName = locationTextField.text,
+            locationName.characters.count > 0 {
+            if let address = addressTextField.text,
+                address.characters.count > 0 {
                 geocoder.geocodeAddressString(address) {
                     [unowned self] (placeMarks, error) -> Void in
-                    
                     let placeMark = placeMarks?.first
                     let item = ToDoItem(
                         title: titleString,
@@ -57,7 +58,10 @@ class InputViewController: UIViewController {
                         location: Location(
                             name: locationName,
                             coordinate: placeMark?.location?.coordinate))
-                    self.itemManager?.add(item)
+                    DispatchQueue.main.async(execute: {
+                        self.itemManager?.add(item)
+                        self.dismiss(animated: true)
+                    })
                 }
             } else {
                 let item = ToDoItem(title: titleString,
@@ -65,17 +69,16 @@ class InputViewController: UIViewController {
                                     timestamp: date?.timeIntervalSince1970,
                                     location: nil)
                 self.itemManager?.add(item)
+                dismiss(animated: true)
             }
-            
         } else {
             let item = ToDoItem(title: titleString,
                                 itemDescription: descriptionString,
                                 timestamp: date?.timeIntervalSince1970,
                                 location: nil)
             self.itemManager?.add(item)
+            dismiss(animated: true)
         }
-        
-        dismiss(animated: true)
     }
 }
 
